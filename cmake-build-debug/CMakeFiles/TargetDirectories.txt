@@ -1,0 +1,3 @@
+/home/ovi/work/sda/SDA-Multidictionar-Ordonat/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ovi/work/sda/SDA-Multidictionar-Ordonat/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ovi/work/sda/SDA-Multidictionar-Ordonat/cmake-build-debug/CMakeFiles/SDA_Multidictionar_Ordonat.dir
