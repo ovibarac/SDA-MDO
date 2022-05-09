@@ -29,9 +29,9 @@ void testCreeaza() {
 	assert(d.dim() == 0);
 	assert(d.vid());
 
-	//IteratorMDO it = d.iterator();
-	//it.prim();
-	//assert(!it.valid());
+	IteratorMDO it = d.iterator();
+	it.prim();
+	assert(!it.valid());
 
 	for (int i = 0; i < 10; i++) {
         vector<TValoare> v= d.cauta(i);
@@ -52,7 +52,6 @@ void testCauta(Relatie r) {
 			d.adauga(i, i + 1);
 			d.adauga(i, i + 2);
 	}
-    d.printMDO();
 	int intervalDim = 10;
 	for (int i = cMin; i <= cMax; i++) {
         vector<TValoare> v= d.cauta(i);
@@ -167,5 +166,5 @@ void testAllExtins() {
 	testCreeaza();
 	testCauta();
 	testSterge();
-//	testIterator();
+	testIterator();
 }

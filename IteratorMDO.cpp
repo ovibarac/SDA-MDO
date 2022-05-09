@@ -1,26 +1,35 @@
 #include "IteratorMDO.h"
 #include "MDO.h"
 
-IteratorMDO::IteratorMDO(const MDO& d) : dict(d){
+const std::pair<int, int> NIL(-100000, -100000);
 
+void IteratorMDO::deplasare() {
+    while((pozcrt < dict.m) && dict.e[pozcrt] == NIL){
+        pozcrt++;
+    }
+}
+
+IteratorMDO::IteratorMDO(const MDO& d) : dict(d){
+    pozcrt = 0;
+    deplasare();
 }
 
 void IteratorMDO::prim(){
-	/* de adaugat */
+	pozcrt = 0;
+    deplasare();
 }
 
 void IteratorMDO::urmator(){
-	/* de adaugat */
+	pozcrt++;
+    deplasare();
 }
 
 bool IteratorMDO::valid() const{
-	/* de adaugat */
-	return false;
+	return pozcrt < dict.m;
 }
 
 TElem IteratorMDO::element() const{
-	/* de adaugat */
-	return pair <TCheie, TValoare>  (-1, -1);
+	return dict.e[pozcrt];
 }
 
 

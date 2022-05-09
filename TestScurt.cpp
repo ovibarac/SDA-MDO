@@ -23,13 +23,6 @@ void testAll(){
 	assert(dictOrd.vid());
     dictOrd.adauga(1,2);
     dictOrd.adauga(1,3);
-//    dictOrd.adauga(2,5);
-//    dictOrd.adauga(2,3);
-//    dictOrd.adauga(5,7);
-//    dictOrd.adauga(6,7);
-//    dictOrd.adauga(6,2);
-//    dictOrd.adauga(4,3);
-//    dictOrd.adauga(9,1);
     assert(dictOrd.dim() == 2);
     assert(!dictOrd.vid());
     vector<TValoare> v= dictOrd.cauta(1);
@@ -37,16 +30,12 @@ void testAll(){
 
     v= dictOrd.cauta(3);
     assert(v.size()==0);
-//    cout<<'\n';
-//    for(auto i : v){
-//        cout<<i<<' ';
-//    }
-//    IteratorMDO it = dictOrd.iterator();
-//    it.prim();
-//    while (it.valid()){
-//    	TElem e = it.element();
-//    	it.urmator();
-//    }
+    IteratorMDO it = dictOrd.iterator();
+    it.prim();
+    while (it.valid()){
+    	TElem e = it.element();
+    	it.urmator();
+    }
     assert(dictOrd.sterge(1, 2) == true);
     assert(dictOrd.sterge(1, 3) == true);
     assert(dictOrd.sterge(2, 1) == false);

@@ -13,8 +13,11 @@ private:
 
 	//contine o referinta catre containerul pe care il itereaza
 	const MDO& dict;
-	/* aici e reprezentarea  specifica a iteratorului */
 
+    //gasire pozitie nenula
+    void deplasare();
+
+    int pozcrt;
 
 public:
 

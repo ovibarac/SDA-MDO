@@ -14,7 +14,7 @@ class IteratorMDO;
 
 typedef bool(*Relatie)(TCheie, TCheie);
 
-#define MAX 40
+#define MAX 400
 
 class MDO {
 	friend class IteratorMDO;
