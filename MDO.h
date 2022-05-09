@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-
+#include <iostream>
 typedef int TCheie;
 typedef int TValoare;
 
@@ -14,12 +14,47 @@ class IteratorMDO;
 
 typedef bool(*Relatie)(TCheie, TCheie);
 
+#define MAX 40
+
 class MDO {
 	friend class IteratorMDO;
     private:
-	/* aici e reprezentarea */
-    public:
+        //marimea tabelei
+	    int m;
 
+        //vectorul elementelor
+        TElem e[MAX];
+
+        //numarul de elemente
+        int lg;
+
+        //functia de dispersie extinsa
+        int d(TElem e, int i) const;
+
+        //functia de dispersie
+        int hashCode(TElem e) const;
+
+        //constante
+        float c1 = 0.5;
+        float c2 = 0.5;
+
+        //functia de relatie
+        Relatie relatie;
+
+        public:
+    void printMDO(){
+        for(int i = 0; i<m; i++){
+            std::cout<<i<<"   ";
+        }
+        cout<<'\n';
+        for(int i = 0; i<m; i++){
+            if(e[i]==pair<int, int>(-100000,-100000))
+                std::cout<<"NIL ";
+            else
+                std::cout<<e[i].first << ','<<e[i].second<<' ';
+        }
+
+    }
 	// constructorul implicit al MultiDictionarului Ordonat
 	MDO(Relatie r);
 

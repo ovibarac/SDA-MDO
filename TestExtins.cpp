@@ -5,7 +5,8 @@
 #include "IteratorMDO.h"
 #include "MDO.h"
 #include "TestExtins.h"
-using namespace std;
+
+using namespace std;
 
 bool cresc(TCheie c1, TCheie c2) {
 	if (c1 <= c2) {
@@ -51,6 +52,7 @@ void testCauta(Relatie r) {
 			d.adauga(i, i + 1);
 			d.adauga(i, i + 2);
 	}
+    d.printMDO();
 	int intervalDim = 10;
 	for (int i = cMin; i <= cMax; i++) {
         vector<TValoare> v= d.cauta(i);
@@ -165,5 +167,5 @@ void testAllExtins() {
 	testCreeaza();
 	testCauta();
 	testSterge();
-	testIterator();
+//	testIterator();
 }

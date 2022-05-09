@@ -2,7 +2,7 @@
 #include "MDO.h"
 
 IteratorMDO::IteratorMDO(const MDO& d) : dict(d){
-	/* de adaugat */
+
 }
 
 void IteratorMDO::prim(){
