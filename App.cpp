@@ -4,7 +4,7 @@
 #include "TestExtins.h"
 
 int main(){
-    testAll();
+//    testAll();
     testAllExtins();
     std::cout<<"Finished Tests!"<<std::endl;
 }

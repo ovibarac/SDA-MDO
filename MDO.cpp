@@ -20,7 +20,7 @@ int MDO::d(TElem e, int i) const{
 
 
 MDO::MDO(Relatie r) {
-	relatie = [](TCheie ch1, TCheie ch2){return ch1 <= ch2;};
+	relatie = r;
 
     m = MAX;
     lg=0;
@@ -34,19 +34,25 @@ void MDO::adauga(TCheie c, TValoare v) {
     int i = 0;
     bool gasit = false;
     do{
-        //CUMVA CU RELATIA
-
-
         int j = d(elem, i);
 //        cout<<elem.first<<' '<<elem.second<<' '<<i<<' '<<j<<'\n';
         if(e[j] == NIL){
             e[j] = elem;
             lg++;
             gasit = true;
+        }else{
+            if(relatie(elem.first, e[j].first)){
+                TElem aux = elem;
+                elem = e[j];
+                e[j] = aux;
+            }
+            i++;
         }
-        else i++;
     }while(i<m && !gasit);
-
+    do{
+        int j = d(elem, i);
+        i++;
+    }while(i<m);
     if(i==m){
         //REDIMENSIONARE SI REDISPERSIE
         //m*=2 ca sa fie putere de 2

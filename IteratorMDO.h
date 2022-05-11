@@ -14,12 +14,13 @@ private:
 	//contine o referinta catre containerul pe care il itereaza
 	const MDO& dict;
 
-    //gasire pozitie nenula
-    void deplasare();
+    vector<TElem> elems;
 
-    int pozcrt;
+    std::vector<TElem>::iterator pozcrt;
 
-public:
+    vector<TElem> interclasare(vector<TElem> v1, vector<TElem> v2, Relatie r);
+
+        public:
 
 		//reseteaza pozitia iteratorului la inceputul containerului
 		void prim();

@@ -23,6 +23,13 @@ void testAll(){
 	assert(dictOrd.vid());
     dictOrd.adauga(1,2);
     dictOrd.adauga(1,3);
+//    dictOrd.adauga(9,4);
+//    dictOrd.adauga(8,3);
+//    dictOrd.adauga(34,3);
+//    dictOrd.adauga(3, 3);
+//    dictOrd.adauga(48,3);
+//    dictOrd.adauga(9,3);
+    dictOrd.printMDO();
     assert(dictOrd.dim() == 2);
     assert(!dictOrd.vid());
     vector<TValoare> v= dictOrd.cauta(1);

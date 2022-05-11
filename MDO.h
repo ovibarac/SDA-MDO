@@ -38,10 +38,11 @@ class MDO {
         float c1 = 0.5;
         float c2 = 0.5;
 
-        //functia de relatie
-        Relatie relatie;
+
 
         public:
+    //functia de relatie
+    Relatie relatie;
     void printMDO(){
         for(int i = 0; i<m; i++){
             std::cout<<i<<"   ";

@@ -145,9 +145,7 @@ void testIterator(Relatie r) {
 	assert(itD.valid());
 	itD.prim();
 	assert(itD.valid());
-
 	TCheie cPrec = itD.element().first;
-
     itD.urmator();
 	while (itD.valid()) {
 		TCheie c = itD.element().first;
